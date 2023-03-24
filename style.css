@@ -41,11 +41,46 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
-  position: absolute;
   border-radius: 5px;
   background: #1c7ccc;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -o-object-fit: contain;
      object-fit: contain;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.front-face {
+  position: absolute;
+  transition: 0.3s linear;
+}
+
+/*JS*/
+.memory-card.flip .back-face {
+  transform: rotateY(0);
+}
+
+.memory-card.flip .front-face {
+  transform: rotateY(180deg);
+}
+
+.memory-card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+}
