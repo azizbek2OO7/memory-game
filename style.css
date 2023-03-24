@@ -49,6 +49,10 @@ body {
      object-fit: contain;
 }
 
+.back-face {
+  transform: rotateY(-180deg);
+}
+
 .front-face {
   position: absolute;
   transition: 0.3s linear;
